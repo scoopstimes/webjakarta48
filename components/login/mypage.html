@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JEKATE48 fanmade Website</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="/assets/css/home.css" rel="stylesheet">
+    <link rel="icon" href="/assets/css/image/favlogo.png" />
+    <meta name="author" content="JEKATE48">
+    <meta property="og:title" content="JEKATE48">
+    <meta property="og:image:height" content="961">
+    <meta property="og:image:width" content="1905">
+    <meta property="og:type" content="website">
+    <meta property="og:image"
+        content="https://cdn.discordapp.com/attachments/989168672708919317/1312702801561784430/jekate.png?ex=674d7540&is=674c23c0&hm=9ea5ecf4eb8348721762f134b4a30affbb5adcf3020bbb79b46a830dc1266520&">
+    <meta property="og:title" content="JEKATE48">
+    <meta name="description" content="EXPERIENCE THE MAGIC OF JKT48, ANYTIME, ANYWHERE">
+    <meta property="og:description" content="EXPERIENCE THE MAGIC OF JKT48, ANYTIME, ANYWHERE">
+    <script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.5/dist/JsBarcode.all.min.js"></script>
+</head>
+
+<body class="min-h-screen bg-gray-900 text-white">
+    <nav class="flex items-center justify-between p-3 bg-gray-800">
+        <div class="text-2xl font-bold">
+            <a href="/home">JEKATE48</a>
+            <span class="text-lg text-sm font-thin">fanmade Website</span>
+        </div>
+        <div class="md:hidden flex items-center">
+            <button id="hamburger-icon" class="text-white">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <div id="nav-links" class="hidden md:flex items-center space-x-6">
+            <a href="/news" class="hover:text-pink-500">News</a>
+            <a href="/members" class="hover:text-pink-500">Members</a>
+            <a href="/schedule" class="hover:text-pink-500">Schedule</a>
+            <a href="/ssk" class="hover:text-pink-500">Sousenkyo</a>
+            <a href="/mypage">
+                <button
+                    class="px-4 py-2 bg-gradient-to-r from-pink-300 via-purple-300 to-cyan-300 text-gray-800 rounded-full hover:opacity-90">
+                    Mypage
+                </button>
+            </a>
+            <a href="/login">
+                <button
+                    class="px-4 py-2 border border-pink-300 text-pink-300 rounded-full hover:bg-pink-300 hover:text-gray-800 transition duration-300">
+                    Login
+                </button>
+            </a>
+        </div>
+    </nav>
+    
+    <div id="mobile-menu" class="md:hidden hidden bg-gray-800 p-3 space-y-4">
+        <a href="/news" class="block text-white hover:text-pink-500">News</a>
+        <a href="/members" class="block text-white hover:text-pink-500">Members</a>
+        <a href="/schedule" class="block text-white hover:text-pink-500">Schedule</a>
+        <a href="/ssk" class="block text-white hover:text-pink-500">Sousenkyo</a>
+        <a href="/mypage" class="block">
+            <button
+                class="w-full px-4 py-2 bg-gradient-to-r from-pink-300 via-purple-300 to-cyan-300 text-gray-800 rounded-full hover:opacity-90">
+                Mypage
+            </button>
+        </a>
+        <a href="/login" class="block">
+            <button
+                class="w-full px-4 py-2 border border-pink-300 text-pink-300 rounded-full hover:bg-pink-300 hover:text-gray-800 transition duration-300">
+                Login
+            </button>
+        </a>
+    </div>
+    
+    <div id="progressContainer" class="relative w-full h-1 bg-gray-700">
+        <div id="progressBar" class="absolute h-1 bg-gradient-to-r from-pink-300 via-purple-300 to-cyan-300"
+            style="width: 0%;">
+        </div>
+    </div>
+
+    <section class="flex flex-col items-center justify-center min-h-screen p-4 bg-gradient-to-br from-gray-900 via-gray-800 to-black">
+        <div class="flex flex-col lg:flex-row w-full max-w-4xl bg-gray-800 rounded-2xl shadow-2xl overflow-hidden">
+            <div class="relative w-full lg:w-1/2">
+                <div class="absolute inset-0 bg-gradient-to-br from-pink-500 via-purple-500 to-cyan-500 opacity-30"></div>
+                <img id="oshimen-photo" 
+                    class="w-full h-64 sm:h-80 lg:h-full object-cover transform transition-transform duration-300 hover:scale-105" 
+                    src="" 
+                    alt="Oshimen Photo">
+                <div class="absolute bottom-4 left-4 bg-white/10 backdrop-blur-sm rounded-lg p-2 ">
+                </div>
+            </div>
+            <div class="p-6 flex flex-col justify-between space-y-6 w-full lg:w-1/2">
+                <div>
+                    <h1 id="welcome-message" class="text-2xl sm:text-2xl font-bold text-pink-300 mb-2">Welcome, Loading...</h1>
+                </div>
+    
+                <div class="bg-gray-700 p-4 sm:p-5 rounded-lg space-y-3">
+                    <h3 class="text-lg sm:text-xl font-bold text-pink-300 flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 sm:h-6 w-5 sm:w-6 mr-2 text-pink-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+                        </svg>
+                        My Page Information
+                    </h3>
+                    <div class="space-y-2">
+                        <p class="flex items-center text-sm sm:text-base">
+                            <span class="font-semibold mr-2">Anggota yang disukai:</span>
+                            <span id="user-oshimen" class="text-gray-300">Loading...</span>
+                        </p>
+                        <p class="flex items-center text-sm sm:text-base">
+                            <span class="font-semibold mr-2">Nomor anggota:</span>
+                            <span id="membership-number" class="text-gray-300">Loading...</span>
+                        </p>
+                        <p class="flex items-center text-sm sm:text-base">
+                            <span class="font-semibold mr-2">Jenis keanggotaan:</span>
+                            <span id="membership-anggota" class="text-gray-300">Loading...</span>
+                        </p>
+                        <p class="flex items-center text-sm sm:text-base">
+                            <span class="font-semibold mr-2">Expires:</span>
+                            <span id="membership-expiry" class="text-yellow-400">27 August 2024</span>
+                        </p>
+                        <p class="flex items-center text-sm sm:text-base">
+                            <span class="font-semibold mr-2">Jumlah kedatangan teater:</span>
+                            <span id="theater-count" class="text-green-400">Loading...</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <h3 class="text-lg sm:text-xl font-bold text-pink-300 mb-3">My Page Barcode</h3>
+                    <svg id="barcode" class="w-full max-w-xs mx-auto p-2 rounded-lg"></svg>
+                </div>
+                <div class="text-center mt-4">
+                    <button class="inline-block px-6 py-2 bg-gradient-to-r from-pink-300/85 via-purple-300/85 to-cyan-300/85 text-white font-semibold text-sm sm:text-base rounded-lg shadow-lg hover:bg-red-600 transition duration-300"
+                        id="logoutButton">
+                        Logout
+                    </button>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    
+    
+    <footer class="bg-gray-800 p-8 mt-auto">
+        <div class="flex flex-col md:flex-row justify-between items-start mb-8">
+            <div class="text-2xl font-bold mb-6 md:mb-0">JEKATE48 <span class="text-lg text-base font-thin">fanmade
+                    Website</span></div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="font-semibold mb-4">News</h3>
+                    <ul class="space-y-2">
+                        <li><a href="/about" class="text-gray-400 hover:text-white">About JEKATE48</a>
+                        </li>
+                        <li><a href="/schedule" class="text-gray-400 hover:text-white">Schedule</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold mb-4">Member</h3>
+                    <ul class="space-y-2">
+                        <li><a href="/members" class="text-gray-400 hover:text-white">Members</a></li>
+                        <li><a href="/members" class="text-gray-400 hover:text-white">Trainee</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold mb-4">Contact</h3>
+                    <ul class="space-y-2">
+                        <li><a href="/terms" class="text-gray-400 hover:text-white">Terms</a></li>
+                        <li><a href="/support" class="text-gray-400 hover:text-white">Support</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center">
+            <p class="text-gray-400 mb-4 md:mb-0">&copy; 2024 fanmade Website by Januar Adhi N. All rights
+reserved.</p>
+            <div class="flex space-x-4">
+                <p class="text-gray-400 mb-4 md:mb-0">Version : 0.8.0</p>
+                <a href="https://github.com/Typicalsleepingboy" class="text-gray-400 hover:text-white">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.instagram.com/_naufaldzaky1/" class="text-gray-400 hover:text-white">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://x.com/Typicalsleeping" class="text-gray-400 hover:text-white">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const hamburgerIcon = document.getElementById('hamburger-icon');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        hamburgerIcon.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+    </script>
+
+    <script src="/progress.js"></script>
+    <script src="/security/typicalsleepingboy.js"></script>
+    <script src="/components/utils/mypage.js"></script>
+</body>
+
+</html>
+
