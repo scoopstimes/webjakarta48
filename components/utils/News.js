@@ -7,8 +7,9 @@ async function fetchLatestNews() {
     _0x31573b.innerHTML = '';
     _0x1711da.forEach(_0x3a06bb => {
       const _0x2900de = document.createElement("div");
-      _0x2900de.className = "bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition-colors duration-300";
-      _0x2900de.innerHTML = "\n                        <div class=\"flex items-center mb-4\">\n                            <img src=\"https://res.cloudinary.com/haymzm4wp/image/upload/assets/jkt48" + _0x3a06bb.badge_url + "\" alt=\"News Badge\" class=\" mr-2 rounded-full\" style=\"width: 60px; height:20px;\"/>\n                            <i class=\"fas fa-info-circle\"></i>\n                        </div>\n                        <h3 class=\" font-semibold mb-2\" style=\"font-size: 20px;\">" + _0x3a06bb.judul + "</h3>\n                        <p class=\"text-gray-400\">" + _0x3a06bb.waktu + "</p>\n                    ";
+      _0x2900de.className = "bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition-colors duration-300 " ;
+      
+      _0x2900de.innerHTML = "\n                        <div class=\"flex items-center mb-2 \" style=\"width: 95%;\">\n                            <img src=\"https://res.cloudinary.com/haymzm4wp/image/upload/assets/jkt48" + _0x3a06bb.badge_url + "\" alt=\"News Badge\" class=\" mr-2 rounded-full\" style=\"width: 60px; height:20px;\"/>\n                            <i class=\"fas fa-info-circle\"></i>\n                        </div>\n                        <h3 class=\" font-semibold mb-2 \" style=\"font-size: 17px;\">" + _0x3a06bb.judul + "</h3>\n                        <p class=\"text-gray-400\">" + _0x3a06bb.waktu + "</p>\n                    ";
       _0x2900de.style.cursor = "pointer";
       _0x2900de.addEventListener("click", () => {
         window.location.href = "/news/" + _0x3a06bb.berita_id;
